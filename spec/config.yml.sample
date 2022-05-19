@@ -1,0 +1,4 @@
+---
+host: "https://okcoin.com/api"
+key: "your key"
+secret: "your secret"
