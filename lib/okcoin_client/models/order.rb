@@ -12,7 +12,7 @@ module OkcoinClient
     attribute :funds, Integer
     attribute :instrument_id, String
     attribute :notional, String
-    attribute :order_id, Integer
+    attribute :order_id, String
     attribute :order_type, Integer
     attribute :price, Float
     attribute :price_avg, Float
