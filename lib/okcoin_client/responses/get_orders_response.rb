@@ -9,7 +9,6 @@ module OkcoinClient
 
     def default_success
       unless parsed_body.present?
-        self.error_message = 'GetOrdersResponse: data not present'
         return false
       end
       raw_response.success?

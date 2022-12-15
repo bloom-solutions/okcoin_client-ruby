@@ -21,8 +21,6 @@ module OkcoinClient
             success?: true,
           })
           expect(empty_response).not_to be_success
-          expect(empty_response.error_message)
-            .to eq "GetOrdersResponse: data not present"
         end
       end
     end
