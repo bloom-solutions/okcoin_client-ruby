@@ -8,6 +8,8 @@ module OkcoinClient
     private
 
     def default_success
+      return false if error_message.present?
+
       unless parsed_body.present?
         return false
       end
@@ -23,6 +25,8 @@ module OkcoinClient
     end
 
     def default_orders
+      return [] if not self.success?
+
       parsed_body.map do |order_hash|
         Order.new(order_hash)
       end

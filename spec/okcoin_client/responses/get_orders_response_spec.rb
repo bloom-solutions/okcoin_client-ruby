@@ -23,6 +23,26 @@ module OkcoinClient
           expect(empty_response).not_to be_success
         end
       end
+
+      context "errors exist" do
+        let(:response) { described_class.new(error_message: "something") }
+        subject { response.success }
+
+        it { is_expected.to be false }
+      end
+    end
+
+    describe "#orders" do
+      context "parsed body contains errors" do
+        let(:response) { described_class.new(parsed_body: parsed_body) }
+        let(:parsed_body) do
+          [ ["error_message", "The currency pair does not exist"] ]
+        end
+
+        it "is empty" do
+          expect(response.orders).to be_empty
+        end
+      end
     end
 
   end
