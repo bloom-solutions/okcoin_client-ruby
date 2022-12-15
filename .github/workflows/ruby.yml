@@ -15,17 +15,13 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-ruby@v1
+    - uses: actions/checkout@v3
+    - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7'
-    - name: Install dependencies
-      run: bundle install
-    - name: Copy config.yml
-      run: cp spec/config.yml{.sample,}
-    - name: Run tests
-      run: bundle exec rake
+        ruby-version: '2.7' # Not needed with a .ruby-version file
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - run: |
+        cp spec/config.yml{.sample,}
+        bundle exec rspec spec
