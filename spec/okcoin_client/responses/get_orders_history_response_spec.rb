@@ -1,7 +1,7 @@
 require "spec_helper"
 
 module OkcoinClient
-  RSpec.describe GetOrdersResponse do
+  RSpec.describe GetOrdersHistoryResponse do
 
     describe "#success" do
       context "empty data body" do

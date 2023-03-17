@@ -1,32 +1,49 @@
 RSpec.describe OkcoinClient::Order do
   it "has the right attributes" do
     order_hash = {
-      "client_oid": "",
-      "created_at": "2022-05-17t06:13:47.552z",
-      "fee": "-0.00042",
-      "fee_currency": "btc",
-      "filled_notional": "9105.212502",
-      "filled_size": "0.3",
-      "funds": "",
-      "instrument_id": "btc-usd",
-      "notional": "",
-      "order_id": "01292391999",
-      "order_type": "0",
-      "price": "30359.9",
-      "price_avg": "30350.7",
-      "product_id": "btc-usd",
-      "rebate": "",
-      "rebate_currency": "",
-      "side": "buy",
-      "size": "0.3",
-      "state": "2",
-      "status": "filled",
-      "timestamp": "2022-05-17t06:13:47.552z",
-      "type":"limit",
+      "accFillSz" => "0.0212",
+      "avgPx" => "27614.246132075471698",
+      "cTime" => "1679293694317",
+      "category" => "normal",
+      "ccy" => "",
+      "clOrdId" => "",
+      "fee" => "-0.00002968",
+      "feeCcy" => "BTC",
+      "fillPx" => "27619.04",
+      "fillSz" => "0.0002",
+      "fillTime" => "1679293694321",
+      "instId" => "BTC-USD",
+      "instType" => "SPOT",
+      "lever" => "",
+      "ordId" => "557933424560574464",
+      "ordType" => "market",
+      "pnl" => "0",
+      "posSide" => "",
+      "px" => "",
+      "rebate" => "0",
+      "rebateCcy" => "USD",
+      "reduceOnly" => "false",
+      "side" => "buy",
+      "slOrdPx" => "",
+      "slTriggerPx" => "",
+      "slTriggerPxType" => "",
+      "source" => "",
+      "state" => "filled",
+      "sz" => "586.52",
+      "tag" => "Paxman",
+      "tdMode" => "cash",
+      "tgtCcy" => "quote_ccy",
+      "tpOrdPx" => "",
+      "tpTriggerPx" => "",
+      "tpTriggerPxType" => "",
+      "tradeId" => "14508585",
+      "uTime" => "1679293694907"
     }
 
-    order = described_class.new(order_hash)
+    order = described_class.new(raw_hash: order_hash)
 
-    expect(order.order_id).to eq "01292391999"
+    expect(order.acc_fill_sz).to eq "0.0212"
+    expect(order.rebate).to eq "0"
+    expect(order.u_time).to eq "1679293694907"
   end
 end

@@ -1,4 +1,6 @@
 ---
-host: "https://okcoin.com/api"
+# `www` is important or you get redirected
+host: "https://www.okcoin.com"
 key: "your key"
 secret: "your secret"
+passphrase: "your passphrase"

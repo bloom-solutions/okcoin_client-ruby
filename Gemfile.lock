@@ -13,6 +13,7 @@ PATH
   specs:
     okcoin_client (1.0.0)
       activesupport
+      addressable (~> 2.3)
       api_client_base
       dry-validation (>= 0.13, < 2)
       typhoeus
@@ -136,4 +137,4 @@ DEPENDENCIES
   webmock (~> 2.3)
 
 BUNDLED WITH
-   2.4.8
+   2.3.21
