@@ -4,6 +4,7 @@ module OkcoinClient
     include APIClientBase::Client.module(default_opts: :default_opts)
 
     api_action :get_orders_history
+    api_action :get_orders_history_archive
 
     attribute :host, String
     attribute :key, String
