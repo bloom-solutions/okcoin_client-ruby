@@ -38,6 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "typhoeus"
   spec.add_dependency "activesupport"
   spec.add_dependency "dry-validation", ">= 0.13", "< 2"
+  spec.add_dependency "addressable", "~> 2.3"
 
   spec.add_development_dependency "pry"
   spec.add_development_dependency "vcr", "~> 3.0"

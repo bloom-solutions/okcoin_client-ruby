@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "[host]/api/v5/trade/orders-history?instId=BTC-USD&instType=SPOT&limit=5&ordType=market&state=filled"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/json
+      Ok-Access-Key:
+      - "[key]"
+      Ok-Access-Sign:
+      - 13Kj+eqNXU0/NTF7UTPyRdkB5qCPCI05/x7lWUlGB18=
+      Ok-Access-Timestamp:
+      - '2023-03-23T06:28:48.834Z'
+      Ok-Access-Passphrase:
+      - "[passphrase]"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 23 Mar 2023 06:28:49 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - __cf_bm=KDPKWSCFFQsqXnE_svZ.RGdisGtbE_C0Mtjnmqaszlc-1679552929-0-ATijuQ5Tblri8pvxzmgHF0V8ds01ED5IPduHHKcHRpmvt1o4fNgb/hmyR5hWLMt9yt7EiFQtwtXPSLg6x7MpURg=;
+        path=/; expires=Thu, 23-Mar-23 06:58:49 GMT; domain=.okcoin.com; HttpOnly;
+        Secure; SameSite=None
+      - locale=en-US; Max-Age=604800; Expires=Thu, 30-Mar-2023 06:28:49 GMT; Path=/
+      Ok-After:
+      - '558656504975069184'
+      Ok-Before:
+      - '558938551891267584'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7ac49dd00b3a7e9b-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code":"0","data":[{"accFillSz":"0.01","avgPx":"27369.53","cTime":"1679533335347","category":"normal","ccy":"","clOrdId":"","fee":"-0.000014","feeCcy":"BTC","fillPx":"27369.53","fillSz":"0.01","fillTime":"1679533335354","instId":"BTC-USD","instType":"SPOT","lever":"","ordId":"558938551891267584","ordType":"market","pnl":"0","posSide":"","px":"","rebate":"0","rebateCcy":"USD","reduceOnly":"false","side":"buy","slOrdPx":"","slTriggerPx":"","slTriggerPxType":"","source":"","state":"filled","sz":"274.56","tag":"Paxman","tdMode":"cash","tgtCcy":"quote_ccy","tpOrdPx":"","tpTriggerPx":"","tpTriggerPxType":"","tradeId":"14521551","uTime":"1679533335608"},{"accFillSz":"0.0041","avgPx":"27368.03","cTime":"1679532554759","category":"normal","ccy":"","clOrdId":"","fee":"-0.00000574","feeCcy":"BTC","fillPx":"27368.03","fillSz":"0.0041","fillTime":"1679532554764","instId":"BTC-USD","instType":"SPOT","lever":"","ordId":"558935277867896832","ordType":"market","pnl":"0","posSide":"","px":"","rebate":"0","rebateCcy":"USD","reduceOnly":"false","side":"buy","slOrdPx":"","slTriggerPx":"","slTriggerPxType":"","source":"","state":"filled","sz":"114.04","tag":"Paxman","tdMode":"cash","tgtCcy":"quote_ccy","tpOrdPx":"","tpTriggerPx":"","tpTriggerPxType":"","tradeId":"14521545","uTime":"1679532555018"},{"accFillSz":"0.046","avgPx":"27404.4141304347826086","cTime":"1679532436409","category":"normal","ccy":"","clOrdId":"","fee":"-0.0000644","feeCcy":"BTC","fillPx":"27405.77","fillSz":"0.0334","fillTime":"1679532436413","instId":"BTC-USD","instType":"SPOT","lever":"","ordId":"558934781472018432","ordType":"market","pnl":"0","posSide":"","px":"","rebate":"0","rebateCcy":"USD","reduceOnly":"false","side":"buy","slOrdPx":"","slTriggerPx":"","slTriggerPxType":"","source":"","state":"filled","sz":"1262.65","tag":"Paxman","tdMode":"cash","tgtCcy":"quote_ccy","tpOrdPx":"","tpTriggerPx":"","tpTriggerPxType":"","tradeId":"14521541","uTime":"1679532436908"},{"accFillSz":"0.0333","avgPx":"27405.25","cTime":"1679532374026","category":"normal","ccy":"","clOrdId":"","fee":"-0.00004662","feeCcy":"BTC","fillPx":"27405.25","fillSz":"0.0333","fillTime":"1679532374032","instId":"BTC-USD","instType":"SPOT","lever":"","ordId":"558934519818752000","ordType":"market","pnl":"0","posSide":"","px":"","rebate":"0","rebateCcy":"USD","reduceOnly":"false","side":"buy","slOrdPx":"","slTriggerPx":"","slTriggerPxType":"","source":"","state":"filled","sz":"914.8","tag":"Paxman","tdMode":"cash","tgtCcy":"quote_ccy","tpOrdPx":"","tpTriggerPx":"","tpTriggerPxType":"","tradeId":"14521539","uTime":"1679532374644"},{"accFillSz":"0.0001","avgPx":"28211.16","cTime":"1679466090122","category":"normal","ccy":"","clOrdId":"","fee":"-0.0039495624","feeCcy":"USD","fillPx":"28211.16","fillSz":"0.0001","fillTime":"1679466090125","instId":"BTC-USD","instType":"SPOT","lever":"","ordId":"558656504975069184","ordType":"market","pnl":"0","posSide":"","px":"","rebate":"0","rebateCcy":"BTC","reduceOnly":"false","side":"sell","slOrdPx":"","slTriggerPx":"","slTriggerPxType":"","source":"","state":"filled","sz":"0.0001","tag":"","tdMode":"cash","tgtCcy":"base_ccy","tpOrdPx":"","tpTriggerPx":"","tpTriggerPxType":"","tradeId":"14514982","uTime":"1679466090706"}],"msg":""}'
+    http_version:
+  recorded_at: Thu, 23 Mar 2023 06:28:49 GMT
+recorded_with: VCR 3.0.3
